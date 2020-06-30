@@ -1,0 +1,2 @@
+# infyangular
+For Angular project
