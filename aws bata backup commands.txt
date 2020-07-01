@@ -1,0 +1,98 @@
+ sudo scp -i InfyKeyRedHat.pem -r /var/www/html/ ubuntu@172.31.29.167:/var/www/html/backup/server01/
+
+
+sudo scp -i InfyKeyRedHat.pem -r /var/www/html/ ubuntu@172.31.29.167:/var/www/html/backup/server02
+
+
+
+zip -r output_file.zip file1 folder1   (How to zip)
+
+unzip MEPL.sql.zip -d /var/www/html/test20/   (How to unzip other folder)
+
+mysql -u username -p database_name < file.sql   (How to upload database in mysql)
+Exp:- mysql -u root -p MEPL < MEPL.sql
+
+mysqldump -u root -p database_name > file.sql  (How to download database use to CLI)
+Exp :-mysqldump -u root -p MEPL > MEPL_15102019.sql
+
+unzip (folder path)    (How to unzip in linux)
+
+/var/log/apache2/error.log   (How to check apache error.log)-(use vim, nano editor)
+
+/var/log/mysql/error.log      (How to check mysql error.log)-(use vim, nano editor)
+
+/var/log/syslog  or  /var/log/messages   (How to check system error.log)-(use vim, nano editor)
+
+/etc/php/7.0/apache2/php.ini  (How to change php.ini file use vim, nano editor)
+
+type:- date&time  (How to cheak current date and time in server)
+
+tail -f /var/log/cron or cat /var/log/cron (How to check cron error.log)
+
+nano /etc/crontab  (How to setup cronjob in server)
+Exp:- */10 * * * * root /usr/bin/curl -X POST http://13.233.6.10/mepl/index.php/dsr_cron
+#
+*/10 * * * * root /usr/bin/curl -X POST http://13.233.6.10/blaupunkt/index.php/dsr_cron
+
+*/2 * * * * root /usr/bin/curl -X POST http://13.233.6.10/esytek/dsr_cron
+#*/2 * * * * root /usr/bin/curl -X POST http://13.233.6.10/clarionservice/Dsr_cron
+*/2 * * * * root /usr/bin/curl -X POST http://13.233.6.10/clarionservice/dsr-cron-job
+*/2 * * * * root /usr/bin/curl -X POST http://13.233.6.10/smartcare/dsr-cron-job
+
+
+mv /home/vivek/oldfolder /home/vivek/newfolder   (How to rename folder name)
+
+
+aws s3 ls s3://prod-norfrost
+
+https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3-commands.html
+
+
+mysql -h databaseprod01.c8sq7w2b16wg.ap-south-1.rds.amazonaws.com -u root -p
+mysql -u root -p databaseprod01.c8sq7w2b16wg.ap-south-1.rds.amazonaws.com
+Inf~!432M0x#123
+
+show full processlist;
+kill id_no;
+show variables like "%timeout%";
+set
+set global wait_timeout=3;
+set global interactive_timeout=3;
+SELECT @@global.wait_timeout , @@session.wait_timeout , @@global.interactive_timeout , @@session.interactive_timeout;
+
+SET wait_timeout = 10 , interactive_timeout = 10 ;
+SET GLOBAL wait_timeout = 10 ;
+SET GLOBAL interactive_timeout = 10;
+select * from INFORMATION_SCHEMA.PROCESSLIST where db = 'somedb';
+
+https://www.rathishkumar.in/2017/10/understanding-mysql-innodb-flush-log-at-trx-commit.html
+https://docs.oracle.com/cd/E17952_01/mysql-8.0-en/innodb-buffer-pool-flushing.html
+https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html
+https://aws.amazon.com/blogs/database/best-practices-for-configuring-parameters-for-amazon-rds-for-mysql-part-1-parameters-related-to-performance/
+
+
+khaitan
+AKIA2355S4G3VMXXZ4HE
+IERhmhMdDcRs4XkYm3if0kR7f3GWs3Qjh05jU9H6 Hide
+1073741824
+
+3134927872
+CBIN0282867
+
+154769202
+1994
+32156
+29246 20589
+
+
+https://support.sciencelogic.com/s/article/1276
+
+
+silo_mysql -e "SHOW PROCESSLIST" | sort -rn -k6 | head -5
+# silo_mysql -e "show processlist" | sort -rn -k 6 | head -5
+
+lsof -n | grep {port number} | grep -v mysql
+# lsof -n | grep 55082 | grep -v mysqld
+
+ps -ef | grep {pid} | grep -v grep
+# ps -ef | grep 80043 | grep -v grep
